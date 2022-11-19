@@ -1,4 +1,4 @@
-package src.ru.itmo.second_course_project.console_game.paragraphs;
+package src.ru.itmo.second_course_project.paragraphs;
 
 import java.util.HashSet;
 
