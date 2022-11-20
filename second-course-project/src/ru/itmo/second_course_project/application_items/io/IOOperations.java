@@ -9,7 +9,7 @@ public class IOOperations<T> {
     public IOOperations() {setFile();}
 
     private void setFile() {
-        file = new File("second-course-project/src/ru/itmo/second_course_project/game_progress_file.txt");
+        file = new File("game_progress_file.txt");
     }
 
     public T readFromFile() throws FileNotFoundException{
@@ -26,7 +26,6 @@ public class IOOperations<T> {
     }
 
     public void writeToFile(T object) {
-        System.out.println(file.getAbsolutePath());
         try (FileOutputStream fileOutput = new FileOutputStream(file);
              ObjectOutputStream objectOutput = new ObjectOutputStream(fileOutput)
         ) {
