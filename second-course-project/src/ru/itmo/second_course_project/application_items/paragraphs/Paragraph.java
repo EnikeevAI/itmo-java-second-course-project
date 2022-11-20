@@ -1,4 +1,4 @@
-package src.ru.itmo.second_course_project.paragraphs;
+package ru.itmo.second_course_project.application_items.paragraphs;
 
 public class Paragraph {
     private String title;
@@ -14,7 +14,7 @@ public class Paragraph {
         setText(text);
     }
 
-    public Paragraph(String title, String text, String menuFirstText, String menuSecondText) {
+    protected Paragraph(String title, String text, String menuFirstText, String menuSecondText) {
         setTitle(title);
         setText(text);
         setMenuFirstText(menuFirstText);
@@ -32,6 +32,11 @@ public class Paragraph {
 
     public String getText() {
         return text;
+    }
+
+    public void printText() {
+        System.out.println();
+        System.out.println(text);
     }
 
     private void setText(String text) {
@@ -69,5 +74,9 @@ public class Paragraph {
 
     protected void setSecondAnswer(Paragraph secondAnswer) {
         this.secondAnswer = secondAnswer;
+    }
+
+    public boolean isLastParagraph() {
+        return getFirstAnswer() == null;
     }
 }

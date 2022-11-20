@@ -1,17 +1,19 @@
-package src.ru.itmo.second_course_project.paragraphs;
+package ru.itmo.second_course_project.application_items.paragraphs;
 
 import java.util.HashSet;
 
-public class ParagraphsCreator {
+public class ParagraphsUtils {
     private static HashSet<Paragraph> paragraphs;
 
-    ParagraphsCreator() { }
+    private ParagraphsUtils() {}
 
     static {
         paragraphsInitialization();
     }
 
     private static void paragraphsInitialization() {
+        paragraphs = new HashSet<>(13);
+
         Paragraph littleFox = new Paragraph(ParagraphsInfo.LITTLE_FOX_TITLE, ParagraphsInfo.LITTLE_FOX_TEXT,
                 ParagraphsInfo.LITTLE_FOX_MENU_FIRST, ParagraphsInfo.LITTLE_FOX_MENU_SECOND);
 
@@ -91,8 +93,12 @@ public class ParagraphsCreator {
         paragraphs.add(eatAndRelax);
         paragraphs.add(takeHoneyToBear);
     }
-
-    public static HashSet<Paragraph> getParagraphsSet() {
+    //TODO
+    /*public static HashSet<Paragraph> getParagraphsSet() {
         return paragraphs;
+    }*/
+
+    public static Paragraph getParagraphByTitle(String title) {
+        return paragraphs.stream().filter(paragraph -> title.equals(paragraph.getTitle())).findFirst().get();
     }
 }
