@@ -19,6 +19,8 @@ public class IOOperations<T> {
             ObjectInputStream objectInput = new ObjectInputStream(fileInput)
         ) {
             result = objectInput.readObject();
+        } catch (FileNotFoundException e) {
+            throw new FileNotFoundException();
         } catch (IOException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }

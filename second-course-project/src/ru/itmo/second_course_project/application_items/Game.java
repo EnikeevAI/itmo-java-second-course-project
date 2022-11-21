@@ -67,6 +67,11 @@ public class Game {
             nextStep(ParagraphsUtils.getParagraphByTitle(loadParagraphTitle));
         } catch (FileNotFoundException e) {
             System.out.println("Пока нет ни одного сохранения игры. Создайте первое :)");
+            if (currentParagraph == null) {
+                run();
+            } else {
+                showMainMenu();
+            }
         }
     }
 
