@@ -12,7 +12,7 @@ public class ParagraphsUtils {
     }
 
     private static void paragraphsInitialization() {
-        paragraphs = new HashSet<>(13);
+        paragraphs = new HashSet<>(ParagraphsInfo.NUMBER_OF_PARAGRAPHS);
 
         Paragraph littleFox = new Paragraph(ParagraphsInfo.LITTLE_FOX_TITLE, ParagraphsInfo.LITTLE_FOX_TEXT,
                 ParagraphsInfo.LITTLE_FOX_MENU_FIRST, ParagraphsInfo.LITTLE_FOX_MENU_SECOND);
@@ -93,10 +93,6 @@ public class ParagraphsUtils {
         paragraphs.add(eatAndRelax);
         paragraphs.add(takeHoneyToBear);
     }
-    //TODO
-    /*public static HashSet<Paragraph> getParagraphsSet() {
-        return paragraphs;
-    }*/
 
     public static Paragraph getParagraphByTitle(String title) {
         return paragraphs.stream().filter(paragraph -> title.equals(paragraph.getTitle())).findFirst().get();

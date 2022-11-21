@@ -1,7 +1,6 @@
 package ru.itmo.second_course_project.application_items.menu;
 
 import ru.itmo.second_course_project.application_items.commands.MenuCommand;
-import ru.itmo.second_course_project.application_items.commands.*;
 import ru.itmo.second_course_project.application_items.paragraphs.Paragraph;
 
 public class MenuWithParagraph extends MenuBase {

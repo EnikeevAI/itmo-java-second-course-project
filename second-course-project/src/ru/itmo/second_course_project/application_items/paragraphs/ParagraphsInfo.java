@@ -3,7 +3,7 @@ package ru.itmo.second_course_project.application_items.paragraphs;
 public final class ParagraphsInfo {
 
     private ParagraphsInfo() {}
-
+    public final static int NUMBER_OF_PARAGRAPHS = 13;
     // Информация для параграфа Лисенок
     public final static String LITTLE_FOX_TITLE = "Лисенок";
     public final static String LITTLE_FOX_TEXT = "Каждое утро Лисёнок просыпался, завтракал и шёл увидеться с " +

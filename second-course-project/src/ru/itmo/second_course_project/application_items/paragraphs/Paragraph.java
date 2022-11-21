@@ -5,7 +5,6 @@ public class Paragraph {
     private String text;
     private String menuFirstText;
     private String menuSecondText;
-
     Paragraph firstAnswer;
     Paragraph secondAnswer;
 
@@ -28,10 +27,6 @@ public class Paragraph {
     private void setTitle(String title) {
         if (title == null) throw new IllegalArgumentException("Поле tile у параграфа не может быть пустым");
         this.title = title;
-    }
-
-    public String getText() {
-        return text;
     }
 
     public void printText() {
